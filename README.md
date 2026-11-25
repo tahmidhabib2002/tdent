@@ -42,7 +42,7 @@ tdent-website/
    git push -u origin main
    ```
 3. Repository → **Settings → Pages** → Source: **Deploy from a branch** → Branch: `main` / `(root)` → **Save**।
-4. ১-২ মিনিট পর সাইট চালু হবে: `https://<your-username>.github.io/tdent/`
+4. ১-২ মিনিট পর সাইট চালু হবে: `https://tdent.site` (custom domain, `CNAME` ফাইলে সেট করা)
 
 ## যোগাযোগ
 WhatsApp: [01608-580002](https://wa.me/8801608580002)

@@ -7,181 +7,185 @@
   <meta name="description" content="TDent: রোগী, বিল, অ্যাপয়েন্টমেন্ট, ডাক্তারের শেয়ার আর মাসের হিসাব — এক জায়গায়। মাসে মাত্র ৩০০০ টাকা।">
   <meta property="og:title" content="TDent — ডেন্টাল ক্লিনিক সফটওয়্যার">
   <meta property="og:description" content="রোগী, বিল, ডাক্তারের হিসাব — এক জায়গায়। মাসে মাত্র ৩০০০ টাকা।">
-  <meta property="og:image" content="assets/img/01-today.webp">
-  <meta name="theme-color" content="#0b1f3a">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f80ed'/%3E%3Cpath d='M18 18h28v8H36v22h-8V26H18z' fill='white'/%3E%3C/svg%3E">
+  <meta property="og:image" content="https://tdent.site/assets/img/01-today.webp">
+  <meta property="og:url" content="https://tdent.site/">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232563eb'/%3E%3Cpath d='M18 18h28v8H36v22h-8V26H18z' fill='white'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav" id="top">
+<header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="TDent হোম">
-      <span class="logo">T</span><span class="brand-name">TDent</span>
-    </a>
+    <a class="brand" href="#" aria-label="TDent হোম"><span class="logo">T</span><span class="brand-name">TDent</span></a>
     <nav class="menu" id="menu">
+      <a href="#showcase">ফিচার</a>
       <a href="#video">ভিডিও</a>
-      <a href="#screens">স্ক্রিনশট</a>
-      <a href="#features">ফিচার</a>
       <a href="#pricing">দাম</a>
       <a href="#faq">প্রশ্ন</a>
     </nav>
-    <a class="btn btn-wa nav-cta" href="https://wa.me/8801608580002?text=TDent%20%E0%A6%8F%E0%A6%B0%20%E0%A6%AB%E0%A7%8D%E0%A6%B0%E0%A6%BF%20%E0%A6%A1%E0%A7%87%E0%A6%AE%E0%A7%8B%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87" target="_blank" rel="noopener">ফ্রি ডেমো</a>
-    <button class="burger" id="burger" aria-label="মেনু খুলুন" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="btn btn-dark nav-cta" href="https://wa.me/8801608580002" target="_blank" rel="noopener">ফ্রি ডেমো</a>
+    <button class="burger" id="burger" aria-label="মেনু" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
 
 <main>
   <!-- HERO -->
   <section class="hero">
-    <div class="glow g1"></div><div class="glow g2"></div>
-    <div class="wrap hero-in">
-      <div class="hero-text reveal">
-        <span class="pill">🦷 ডেন্টাল ক্লিনিক ম্যানেজমেন্ট সফটওয়্যার</span>
-        <h1>রোগী, বিল, ডাক্তারের হিসাব —<br><span class="hl">এক জায়গায়।</span></h1>
-        <p class="lead">খাতা-কলম আর মনে রাখার ঝামেলা শেষ। কোন রোগীর কত বাকি, আজ কত কালেকশন, কোন ডাক্তারের কত শেয়ার — সব এক ক্লিকে দেখুন।</p>
-        <div class="hero-cta">
-          <a class="btn btn-wa btn-lg" href="https://wa.me/8801608580002" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
-            ফ্রি ডেমো দেখুন
-          </a>
-          <a class="btn btn-ghost btn-lg" href="#video">▶ ভিডিও দেখুন</a>
-        </div>
-        <ul class="hero-points">
-          <li>মাসে মাত্র <b>৳৩০০০</b></li>
-          <li>মোবাইল + কম্পিউটার</li>
-          <li>বাংলা + English</li>
-        </ul>
+    <div class="mesh" aria-hidden="true"></div>
+    <div class="wrap hero-head reveal">
+      <a class="badge" href="#video"><span class="dot"></span> নতুন: দাঁতের নম্বরসহ মানি রিসিট <b>→</b></a>
+      <h1>ডেন্টাল চেম্বার চালান<br><span class="grad">খাতা ছাড়াই, নিশ্চিন্তে।</span></h1>
+      <p class="lead">রোগী, বিল, বাকি, অ্যাপয়েন্টমেন্ট আর ডাক্তারের শেয়ার — সব হিসাব এক সফটওয়্যারে। মোবাইল বা কম্পিউটার, যেখান থেকে খুশি।</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/8801608580002" target="_blank" rel="noopener">ফ্রি ডেমো দেখুন <span aria-hidden="true">→</span></a>
+        <a class="btn btn-light btn-lg" href="#video"><span class="play" aria-hidden="true"></span> ভিডিও দেখুন</a>
       </div>
-      <div class="hero-shot reveal">
-        <div class="browser">
-          <div class="bar"><i></i><i></i><i></i><span>tdent.app/today</span></div>
-          <img src="assets/img/01-today.webp" alt="TDent আজকের ড্যাশবোর্ড" width="1600" height="1000">
-        </div>
-        <div class="float-card fc1"><b>🦷 দাঁতের নম্বরসহ বিল</b><small>রিসিট এক ক্লিকে প্রিন্ট</small></div>
-        <div class="float-card fc2"><b>📱 মোবাইলেও চলে</b><small>কিছু ইনস্টল লাগে না</small></div>
-      </div>
+      <p class="fine">মাসে মাত্র <b>৳৩০০০</b> · সেটআপ ও ট্রেনিং সহ · কোনো ইনস্টল লাগে না</p>
+    </div>
+
+    <div class="wrap stage reveal">
+      <figure class="frame main-frame zoomable" data-i="0">
+        <div class="chrome"><i></i><i></i><i></i><span>tdent.site/today</span></div>
+        <img src="assets/img/01-today.webp" alt="TDent — আজকের ড্যাশবোর্ড" width="1600" height="1000">
+      </figure>
+      <figure class="frame side side-l zoomable" data-i="2">
+        <img src="assets/img/03-patient-profile.webp" alt="রোগীর প্রোফাইল" width="1600" height="1000" loading="lazy">
+      </figure>
+      <figure class="frame side side-r zoomable" data-i="4">
+        <img src="assets/img/05-doctor-profit.webp" alt="ডাক্তারের লাভ-লস" width="1600" height="1000" loading="lazy">
+      </figure>
+      <div class="chip chip-a"><span>🦷</span><div><b>দাঁতের নম্বরসহ বিল</b><small>রিসিট এক ক্লিকে প্রিন্ট</small></div></div>
+      <div class="chip chip-b"><span>📊</span><div><b>লাভ-লস অটো হিসাব</b><small>প্রতিটা ডাক্তারের আলাদা</small></div></div>
     </div>
   </section>
 
-  <!-- PROBLEM -->
-  <section class="problem">
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap stats-in">
+      <div class="stat reveal"><b>৮+</b><span>মডিউল এক সফটওয়্যারে</span></div>
+      <div class="stat reveal"><b>৪</b><span>ধরনের ইউজার রোল</span></div>
+      <div class="stat reveal"><b>২</b><span>ভাষা: বাংলা ও English</span></div>
+      <div class="stat reveal"><b>২৪/৭</b><span>অনলাইনে, যেকোনো ডিভাইসে</span></div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section class="showcase" id="showcase">
     <div class="wrap">
-      <h2 class="reveal">খাতা-কলমে চেম্বার চালাতে গিয়ে এসব হয়?</h2>
-      <div class="prob-grid">
-        <div class="prob reveal"><span>📒</span><h3>বাকির হিসাব হারিয়ে যায়</h3><p>কোন রোগী কত দিয়েছে, কত বাকি — খাতা খুঁজতে খুঁজতে সময় শেষ।</p></div>
-        <div class="prob reveal"><span>🧮</span><h3>ডাক্তারের শেয়ারে গোলমাল</h3><p>মাস শেষে কোন ডাক্তারের কত পাওনা, হাতে হিসাব করতে গিয়ে ভুল।</p></div>
-        <div class="prob reveal"><span>📅</span><h3>অ্যাপয়েন্টমেন্ট ভুলে যাওয়া</h3><p>কাল কার আসার কথা, কোন চেয়ারে — মনে না থাকলে রোগী ফিরে যায়।</p></div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">প্রতিটা পেজ</span>
+        <h2>চেম্বারের পুরো কাজ, সুন্দর করে সাজানো</h2>
+        <p>ছবিতে চাপলে বড় করে দেখা যাবে।</p>
       </div>
-      <p class="answer reveal">TDent এই সব সমস্যা এক জায়গায় সমাধান করে। ✅</p>
+      <div id="rows"></div>
     </div>
   </section>
 
   <!-- VIDEO -->
   <section class="video-sec" id="video">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="kicker">ভিডিও</span>
-        <h2>দেড় মিনিটে দেখুন TDent কী করে</h2>
+      <div class="sec-head light reveal">
+        <span class="eyebrow">ভিডিও</span>
+        <h2>দেড় মিনিটে দেখে নিন</h2>
+        <p>TDent দিয়ে একটা দিনের কাজ কীভাবে হয়।</p>
       </div>
-      <div class="video-box reveal">
+      <div class="video-wrap reveal">
         <video controls preload="metadata" playsinline poster="assets/video/poster.webp">
           <source src="assets/video/tdent-promo.mp4" type="video/mp4">
-          আপনার ব্রাউজার ভিডিও চালাতে পারছে না। <a href="assets/video/tdent-promo.mp4">ভিডিওটা ডাউনলোড করুন</a>।
+          <a href="assets/video/tdent-promo.mp4">ভিডিওটা ডাউনলোড করুন</a>
         </video>
       </div>
     </div>
   </section>
 
-  <!-- SCREENS -->
-  <section class="screens" id="screens">
+  <!-- BENTO FEATURES -->
+  <section class="bento-sec">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="kicker">স্ক্রিনশট</span>
-        <h2>প্রতিটা পেজ এক নজরে</h2>
-        <p>নিচের যেকোনো নাম চাপুন। ছবিতে চাপলে বড় করে দেখা যাবে।</p>
+        <span class="eyebrow">আরও যা আছে</span>
+        <h2>ছোট ছোট জিনিস, যা প্রতিদিন কাজে লাগে</h2>
       </div>
-      <div class="tabs reveal">
-        <div class="tab-list" role="tablist" id="tabList"></div>
-        <div class="tab-view">
-          <div class="browser">
-            <div class="bar"><i></i><i></i><i></i><span id="tabUrl">tdent.app</span></div>
-            <img id="tabImg" src="assets/img/01-today.webp" alt="" width="1600" height="1000">
-          </div>
-          <div class="tab-caption">
-            <h3 id="tabTitle"></h3>
-            <p id="tabDesc"></p>
-          </div>
+      <div class="bento">
+        <div class="cell c-big reveal">
+          <h3>রোল অনুযায়ী অ্যাক্সেস</h3>
+          <p>অ্যাডমিন, রিসেপশন, ডাক্তার, কল সেন্টার — যার যতটুকু দরকার, শুধু ততটুকুই দেখবে। হিসাব থাকে নিরাপদ।</p>
+          <div class="roles"><span>অ্যাডমিন</span><span>রিসেপশন</span><span>ডাক্তার</span><span>কল সেন্টার</span></div>
+        </div>
+        <div class="cell reveal"><i>🧾</i><h3>মানি রিসিট</h3><p>দাঁতের নম্বরসহ সুন্দর রিসিট, এক ক্লিকে প্রিন্ট।</p></div>
+        <div class="cell reveal"><i>⏪</i><h3>আগের পেমেন্ট</h3><p>পুরোনো তারিখের জমা সেই তারিখেই হিসাবে ওঠে।</p></div>
+        <div class="cell reveal"><i>🔢</i><h3>সিরিয়াল / কিউ</h3><p>আজ কে কোন সিরিয়ালে, কোন ডাক্তারের কাছে।</p></div>
+        <div class="cell reveal"><i>🌐</i><h3>বাংলা ও English</h3><p>এক ক্লিকে ভাষা বদল, রিসিটও দুই ভাষায়।</p></div>
+        <div class="cell c-wide reveal">
+          <div><h3>মোবাইল, ট্যাবলেট, কম্পিউটার</h3><p>ব্রাউজার থাকলেই চলবে। কিছু ইনস্টল করতে হয় না, ডাটা থাকে অনলাইনে নিরাপদে।</p></div>
+          <div class="devices" aria-hidden="true"><span class="d-lap"></span><span class="d-tab"></span><span class="d-ph"></span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section class="features" id="features">
+  <!-- COMPARE -->
+  <section class="compare-sec">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="kicker">ফিচার</span>
-        <h2>চেম্বার চালাতে যা যা লাগে, সব আছে</h2>
+        <span class="eyebrow">পার্থক্য</span>
+        <h2>খাতা-কলম বনাম TDent</h2>
       </div>
-      <div class="feat-grid">
-        <div class="feat reveal"><i>🧑‍⚕️</i><h3>রোগীর প্রোফাইল</h3><p>চিকিৎসার ইতিহাস, মেডিকেল হিস্ট্রি, ফাইল, মোট বিল, জমা আর বাকি — এক পেজে।</p></div>
-        <div class="feat reveal"><i>🦷</i><h3>দাঁতের নম্বরসহ বিল</h3><p>কোন দাঁতে কী কাজ, দাঁতের চার্ট থেকে বেছে বিল। মানি রিসিটে দাঁতের নম্বর লেখা থাকে।</p></div>
-        <div class="feat reveal"><i>🧾</i><h3>মানি রিসিট প্রিন্ট</h3><p>এক ক্লিকে সুন্দর রিসিট প্রিন্ট। আগের সব রিসিটও নতুন ফরম্যাটে।</p></div>
-        <div class="feat reveal"><i>📅</i><h3>অ্যাপয়েন্টমেন্ট</h3><p>ডাক্তার আর চেয়ার অনুযায়ী সময় দিন। ভুল হলে রোগীর পেজ থেকেই ঠিক করুন।</p></div>
-        <div class="feat reveal"><i>🔢</i><h3>সিরিয়াল / কিউ</h3><p>আজ কে কোন সিরিয়ালে, কোন ডাক্তারের কাছে — রিসেপশন থেকে সব দেখা যায়।</p></div>
-        <div class="feat reveal"><i>💰</i><h3>ডাক্তারের শেয়ার</h3><p>প্রতিটা ডাক্তারের আয়, শেয়ার আর লাভ-লস অটোমেটিক হিসাব।</p></div>
-        <div class="feat reveal"><i>📊</i><h3>দৈনিক ও মাসিক রিপোর্ট</h3><p>আজকের কালেকশন, খরচ, ব্যালেন্স আর পুরো মাসের রিপোর্ট।</p></div>
-        <div class="feat reveal"><i>📦</i><h3>ইনভেন্টরি</h3><p>যন্ত্রপাতি আর মালামালের স্টক। কম পড়লে আগেই জানিয়ে দেয়।</p></div>
-        <div class="feat reveal"><i>🔐</i><h3>রোল অনুযায়ী অ্যাক্সেস</h3><p>অ্যাডমিন, রিসেপশন, ডাক্তার, কল সেন্টার — যার যতটুকু দরকার, ততটুকু দেখবে।</p></div>
-        <div class="feat reveal"><i>⏪</i><h3>আগের পেমেন্ট</h3><p>পুরোনো তারিখের জমা সেই তারিখেই হিসাবে ওঠে, আজকের হিসাব নষ্ট হয় না।</p></div>
-        <div class="feat reveal"><i>🌐</i><h3>বাংলা ও English</h3><p>এক ক্লিকে ভাষা বদলান। রিসিটও দুই ভাষায়।</p></div>
-        <div class="feat reveal"><i>📱</i><h3>যেকোনো ডিভাইসে</h3><p>মোবাইল, ট্যাবলেট, কম্পিউটার — ব্রাউজার থাকলেই চলবে। কিছু ইনস্টল লাগে না।</p></div>
+      <div class="compare reveal">
+        <div class="col old">
+          <h3>খাতা-কলমে</h3>
+          <ul>
+            <li>বাকির হিসাব খুঁজতে সময় নষ্ট</li>
+            <li>ডাক্তারের শেয়ার হাতে হিসাব, ভুলের ঝুঁকি</li>
+            <li>অ্যাপয়েন্টমেন্ট ভুলে গেলে রোগী ফিরে যায়</li>
+            <li>মাস শেষে লাভ-লস বোঝা কঠিন</li>
+          </ul>
+        </div>
+        <div class="col new">
+          <h3><span class="logo sm">T</span> TDent দিয়ে</h3>
+          <ul>
+            <li>রোগীর নাম লিখলেই বিল, জমা, বাকি</li>
+            <li>প্রতিটা ডাক্তারের শেয়ার অটোমেটিক</li>
+            <li>আজকের সব অ্যাপয়েন্টমেন্ট এক পেজে</li>
+            <li>দৈনিক ও মাসিক রিপোর্ট এক ক্লিকে</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
   <section class="pricing" id="pricing">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="kicker">দাম</span>
-        <h2>সহজ দাম, কোনো লুকানো খরচ নেই</h2>
+    <div class="wrap price-in">
+      <div class="price-copy reveal">
+        <span class="eyebrow">দাম</span>
+        <h2>এক দাম, সব ফিচার</h2>
+        <p>কোনো লুকানো খরচ নেই। রোগী বা বিলের সংখ্যায় কোনো সীমা নেই। শুরুতে সেটআপ আর ট্রেনিং আমরা করে দিই।</p>
+        <ol class="steps">
+          <li><b>১</b><div><h4>WhatsApp করুন</h4><p>01608-580002</p></div></li>
+          <li><b>২</b><div><h4>ফ্রি ডেমো দেখুন</h4><p>আপনার চেম্বারের মতো করে</p></div></li>
+          <li><b>৩</b><div><h4>সেদিন থেকেই চালু</h4><p>সেটআপ ও ট্রেনিং সহ</p></div></li>
+        </ol>
       </div>
       <div class="price-card reveal">
-        <div class="price-top">
-          <span class="plan">TDent ফুল প্যাকেজ</span>
-          <div class="price"><span class="cur">৳</span><b>৩০০০</b><span class="per">/ মাস</span></div>
-          <p>সব ফিচার, আনলিমিটেড রোগী</p>
+        <div class="pc-top">
+          <span class="tag">ফুল প্যাকেজ</span>
+          <div class="amount"><span>৳</span><b>৩০০০</b><small>/ মাস</small></div>
+          <p>সব ফিচার · আনলিমিটেড রোগী</p>
         </div>
         <ul class="incl">
-          <li>সব ফিচার চালু</li>
-          <li>আনলিমিটেড রোগী আর বিল</li>
-          <li>একাধিক ইউজার (অ্যাডমিন, রিসেপশন, ডাক্তার)</li>
+          <li>সব মডিউল চালু</li>
+          <li>আনলিমিটেড রোগী, বিল আর রিসিট</li>
+          <li>একাধিক ইউজার ও রোল</li>
           <li>সেটআপ আর ট্রেনিং</li>
-          <li>ডাটা ব্যাকআপ</li>
+          <li>নিয়মিত ডাটা ব্যাকআপ</li>
           <li>WhatsApp সাপোর্ট</li>
         </ul>
-        <a class="btn btn-wa btn-lg btn-block" href="https://wa.me/8801608580002" target="_blank" rel="noopener">ফ্রি ডেমো চাই</a>
+        <a class="btn btn-primary btn-lg btn-block" href="https://wa.me/8801608580002" target="_blank" rel="noopener">ফ্রি ডেমো চাই →</a>
       </div>
-    </div>
-  </section>
-
-  <!-- STEPS -->
-  <section class="steps">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="kicker">শুরু করবেন কীভাবে</span>
-        <h2>৩ ধাপে চালু</h2>
-      </div>
-      <ol class="step-list">
-        <li class="reveal"><b>১</b><h3>WhatsApp করুন</h3><p>01608-580002 নম্বরে মেসেজ দিন।</p></li>
-        <li class="reveal"><b>২</b><h3>ফ্রি ডেমো দেখুন</h3><p>আপনার চেম্বারের মতো করে সফটওয়্যারটা দেখিয়ে দেবো।</p></li>
-        <li class="reveal"><b>৩</b><h3>কাজ শুরু</h3><p>সেটআপ আর ট্রেনিং আমরা করে দেবো, সেদিন থেকেই চালু।</p></li>
-      </ol>
     </div>
   </section>
 
@@ -189,7 +193,7 @@
   <section class="faq" id="faq">
     <div class="wrap narrow">
       <div class="sec-head reveal">
-        <span class="kicker">প্রশ্ন ও উত্তর</span>
+        <span class="eyebrow">প্রশ্ন ও উত্তর</span>
         <h2>সাধারণ প্রশ্ন</h2>
       </div>
       <details class="reveal"><summary>কম্পিউটার না জানলেও চালাতে পারবো?</summary><p>হ্যাঁ। সব কিছু বাংলায়, বাটনগুলো সহজ। শুরুতে আমরা ট্রেনিং দিয়ে দিই।</p></details>
@@ -200,20 +204,26 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="final">
-    <div class="wrap final-in reveal">
-      <span class="logo logo-lg">T</span>
-      <h2>আজই আপনার চেম্বার ডিজিটাল করুন</h2>
-      <p>ফ্রি ডেমো দেখতে WhatsApp করুন</p>
-      <a class="btn btn-wa btn-lg" href="https://wa.me/8801608580002" target="_blank" rel="noopener">WhatsApp: 01608-580002</a>
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta-card reveal">
+        <div class="mesh dark" aria-hidden="true"></div>
+        <span class="logo lg">T</span>
+        <h2>আজই আপনার চেম্বার ডিজিটাল করুন</h2>
+        <p>ফ্রি ডেমো দেখতে এখনই WhatsApp করুন</p>
+        <a class="btn btn-wa btn-lg" href="https://wa.me/8801608580002" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
+          01608-580002
+        </a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <div class="brand"><span class="logo">T</span><span class="brand-name">TDent</span></div>
+    <a class="brand" href="#"><span class="logo">T</span><span class="brand-name">TDent</span></a>
     <p>রোগী, বিল, ডাক্তারের হিসাব — এক জায়গায়।</p>
     <p class="small">© <span id="year"></span> TDent · Made by Tahmid</p>
   </div>
@@ -226,9 +236,8 @@
 <div class="lightbox" id="lightbox" hidden>
   <button class="lb-close" id="lbClose" aria-label="বন্ধ করুন">✕</button>
   <button class="lb-nav lb-prev" id="lbPrev" aria-label="আগের ছবি">‹</button>
-  <img id="lbImg" src="" alt="">
+  <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
   <button class="lb-nav lb-next" id="lbNext" aria-label="পরের ছবি">›</button>
-  <p id="lbCap"></p>
 </div>
 
 <script src="script.js"></script>

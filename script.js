@@ -2,22 +2,56 @@
 (function () {
   "use strict";
 
-  // App screens shown in the tab gallery and lightbox.
+  var themes = ["t-blue", "t-violet", "t-teal", "t-amber"];
   var screens = [
-    { file: "01-today", url: "tdent.app/today", title: "আজকের সব", desc: "আজকের নতুন রোগী, অ্যাপয়েন্টমেন্ট, সিরিয়াল, বিল আর জমা — সব এক পেজে।" },
-    { file: "02-appointments", url: "tdent.app/appointments", title: "অ্যাপয়েন্টমেন্ট", desc: "ডাক্তার আর চেয়ার অনুযায়ী সময় ঠিক করুন, ভুল হলে এক ক্লিকে বদলান।" },
-    { file: "03-patient-profile", url: "tdent.app/patients/TD-0001", title: "রোগীর প্রোফাইল", desc: "মোট বিল, জমা, বকেয়া আর পুরো চিকিৎসার ইতিহাস এক জায়গায়।" },
-    { file: "04-new-bill", url: "tdent.app/bill/new", title: "নতুন বিল", desc: "দাঁতের চার্ট থেকে দাঁত বেছে বিল করুন, রিসিটে দাঁতের নম্বর থাকবে।" },
-    { file: "05-doctor-profit", url: "tdent.app/doctors", title: "ডাক্তারের লাভ-লস", desc: "প্রতিটা ডাক্তারের আয়, শেয়ার আর লাভ-লস অটোমেটিক হিসাব।" },
-    { file: "06-daily-account", url: "tdent.app/daily", title: "দৈনিক হিসাব", desc: "আজ কত কালেকশন, কত খরচ, ক্যাশে কত আছে — দিন শেষে এক নজরে।" },
-    { file: "07-monthly-report", url: "tdent.app/reports/monthly", title: "মাসিক রিপোর্ট", desc: "পুরো মাসের আয়, খরচ আর লাভের পরিষ্কার রিপোর্ট।" },
-    { file: "08-inventory", url: "tdent.app/inventory", title: "ইনভেন্টরি", desc: "মালামালের স্টক রাখুন, কম পড়লে আগেই জানবেন।" }
+    { file: "01-today", url: "tdent.site/today", title: "আজকের সব, এক পেজে",
+      desc: "দিনের শুরুতেই দেখুন আজ কী কী আছে। নতুন রোগী থেকে বিল — কিছুই বাদ যায় না।",
+      points: ["আজকের নতুন রোগী আর ভিজিট", "অ্যাপয়েন্টমেন্ট আর সিরিয়াল", "আজকের বিল আর জমা"] },
+    { file: "02-appointments", url: "tdent.site/appointments", title: "অ্যাপয়েন্টমেন্ট",
+      desc: "ডাক্তার আর চেয়ার অনুযায়ী সময় দিন। কাল কার আসার কথা, আর ভুলবেন না।",
+      points: ["ডাক্তার ও চেয়ার অনুযায়ী সময়", "রোগীর পেজ থেকেই ঠিক করা যায়", "আগের আর পরের সব অ্যাপয়েন্টমেন্ট"] },
+    { file: "03-patient-profile", url: "tdent.site/patients/TD-0001", title: "রোগীর পুরো প্রোফাইল",
+      desc: "রোগীর নাম লিখলেই সব হাজির — চিকিৎসার ইতিহাস থেকে বাকির হিসাব পর্যন্ত।",
+      points: ["মোট বিল, জমা আর বকেয়া", "চিকিৎসা ও মেডিকেল হিস্ট্রি", "ফাইল, ছবি আর অ্যাপয়েন্টমেন্ট"] },
+    { file: "04-new-bill", url: "tdent.site/bill/new", title: "দাঁতের নম্বরসহ বিল",
+      desc: "দাঁতের চার্ট থেকে দাঁত বেছে বিল করুন। রিসিটে কোন দাঁতে কী কাজ, লেখা থাকে।",
+      points: ["দাঁতের চার্ট থেকে বাছাই", "ডিসকাউন্ট আর আংশিক জমা", "এক ক্লিকে মানি রিসিট প্রিন্ট"] },
+    { file: "05-doctor-profit", url: "tdent.site/doctors", title: "ডাক্তারের লাভ-লস",
+      desc: "মাস শেষে আর হাতে হিসাব নয়। প্রতিটা ডাক্তারের আয় আর শেয়ার অটোমেটিক।",
+      points: ["ডাক্তার অনুযায়ী আয়", "শেয়ার আর পাওনা হিসাব", "লাভ-লস এক নজরে"] },
+    { file: "06-daily-account", url: "tdent.site/daily", title: "দৈনিক হিসাব",
+      desc: "দিন শেষে ক্যাশ মিলিয়ে নিন। আজ কত এল, কত গেল — পরিষ্কার।",
+      points: ["আজকের কালেকশন", "আজকের খরচ", "আগের তারিখের জমা সেই তারিখেই"] },
+    { file: "07-monthly-report", url: "tdent.site/reports/monthly", title: "মাসিক রিপোর্ট",
+      desc: "পুরো মাসের আয়, খরচ আর লাভ এক রিপোর্টে। সিদ্ধান্ত নিন তথ্য দেখে।",
+      points: ["মাসের মোট আয় ও খরচ", "নিট লাভ", "খরচের খাত অনুযায়ী ভাগ"] },
+    { file: "08-inventory", url: "tdent.site/inventory", title: "ইনভেন্টরি",
+      desc: "মালামাল ফুরিয়ে যাওয়ার আগেই জানুন। স্টক থাকে সবসময় হিসাবে।",
+      points: ["সব মালামালের স্টক", "কম পড়লে সতর্কবার্তা", "কেনা আর ব্যবহারের হিসাব"] }
   ];
   var bnDigits = "০১২৩৪৫৬৭৮৯";
   function bn(n) { return String(n).replace(/\d/g, function (d) { return bnDigits[d]; }); }
   function src(i) { return "assets/img/" + screens[i].file + ".webp"; }
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
-  // Mobile menu
+  // Build showcase rows
+  var rows = document.getElementById("rows");
+  rows.innerHTML = screens.map(function (s, i) {
+    return '<article class="row ' + themes[i % 4] + (i % 2 ? " flip" : "") + '">' +
+      '<div class="copy reveal"><span class="num"><em>' + bn(i + 1) + "</em>" + (i < 9 ? "" : "") + "</span>" +
+      "<h3>" + esc(s.title) + "</h3><p>" + esc(s.desc) + "</p><ul>" +
+      s.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul></div>" +
+      '<div class="visual reveal"><figure class="frame zoomable" data-i="' + i + '">' +
+      '<div class="chrome"><i></i><i></i><i></i><span>' + esc(s.url) + "</span></div>" +
+      '<img src="' + src(i) + '" alt="TDent — ' + esc(s.title) + '" width="1600" height="1000" loading="lazy"></figure></div>' +
+      "</article>";
+  }).join("");
+
+  // Nav: shadow on scroll + mobile menu
+  var nav = document.getElementById("nav");
+  function onScroll() { nav.classList.toggle("scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
   var burger = document.getElementById("burger");
   var menu = document.getElementById("menu");
   burger.addEventListener("click", function () {
@@ -28,41 +62,11 @@
     if (e.target.tagName === "A") { menu.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }
   });
 
-  // Screen tabs
-  var list = document.getElementById("tabList");
-  var img = document.getElementById("tabImg");
-  var current = 0;
-  screens.forEach(function (s, i) {
-    var b = document.createElement("button");
-    b.className = "tab-btn";
-    b.type = "button";
-    b.setAttribute("role", "tab");
-    b.innerHTML = '<span class="n">' + bn(i + 1) + "</span>" + s.title;
-    b.addEventListener("click", function () { show(i); });
-    list.appendChild(b);
-  });
-  function show(i) {
-    current = i;
-    var s = screens[i];
-    [].forEach.call(list.children, function (b, k) { b.setAttribute("aria-selected", k === i); });
-    img.classList.add("fade");
-    setTimeout(function () {
-      img.src = src(i);
-      img.alt = "TDent — " + s.title;
-      img.classList.remove("fade");
-    }, 180);
-    document.getElementById("tabUrl").textContent = s.url;
-    document.getElementById("tabTitle").textContent = s.title;
-    document.getElementById("tabDesc").textContent = s.desc;
-  }
-  show(0);
-  // Preload the rest so switching is instant.
-  screens.forEach(function (_, i) { if (i) { var p = new Image(); p.src = src(i); } });
-
-  // Lightbox
+  // Lightbox for every screenshot
   var lb = document.getElementById("lightbox");
   var lbImg = document.getElementById("lbImg");
   var lbCap = document.getElementById("lbCap");
+  var current = 0;
   function openLb(i) {
     current = (i + screens.length) % screens.length;
     lbImg.src = src(current);
@@ -71,8 +75,11 @@
     lb.hidden = false;
     document.body.style.overflow = "hidden";
   }
-  function closeLb() { lb.hidden = true; document.body.style.overflow = ""; show(current); }
-  document.querySelector(".tab-view .browser").addEventListener("click", function () { openLb(current); });
+  function closeLb() { lb.hidden = true; document.body.style.overflow = ""; }
+  document.addEventListener("click", function (e) {
+    var z = e.target.closest(".zoomable");
+    if (z) openLb(+z.getAttribute("data-i"));
+  });
   document.getElementById("lbClose").addEventListener("click", closeLb);
   document.getElementById("lbPrev").addEventListener("click", function () { openLb(current - 1); });
   document.getElementById("lbNext").addEventListener("click", function () { openLb(current + 1); });
@@ -91,7 +98,7 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
     items.forEach(function (el) { io.observe(el); });
   } else {
     items.forEach(function (el) { el.classList.add("in"); });
